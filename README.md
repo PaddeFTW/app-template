@@ -82,6 +82,7 @@ types/
 - `ROADMAP.md`
 - `CHANGELOG.md`
 - `AGENTS.md`
+- `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`
 - `docs/`
 
 ## Getting Started

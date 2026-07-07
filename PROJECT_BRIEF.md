@@ -49,6 +49,8 @@ Examples include:
 4. Keep foundational code clean, neutral, and scalable.
 5. Separate platform concerns from product concerns early.
 
+Future product decisions should follow `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`, which defines Quality WorX Product Principles v2.0 and the platform direction toward guided work experiences.
+
 ## Success Criteria
 
 The template is successful when a future team can clone it and immediately inherit:

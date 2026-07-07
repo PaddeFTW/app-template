@@ -8,6 +8,8 @@ When a future application grows beyond the starter:
 2. create module-specific folders for domain code
 3. compose layouts and primitives instead of editing them unnecessarily
 
+Before defining product flows, review `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`. Future apps should favor guided work experiences over document-shaped forms when the user needs help making decisions.
+
 ## Decide Where New Code Belongs
 
 Use this rule of thumb:

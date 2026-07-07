@@ -4,6 +4,8 @@
 
 This repository separates platform foundation concerns from application concerns.
 
+Future product architecture should also be guided by `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`. In particular, the platform language should use `Guided Workflow Engine` as the reusable architectural concept; quiz-style screens are only one possible UI pattern inside that broader approach.
+
 The foundation should answer:
 
 - how shared UI is structured
