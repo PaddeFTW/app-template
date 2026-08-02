@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Verify your email",
+  title: "Bekräfta din e-postadress",
 };
 
 interface VerifyEmailPageProps {
@@ -20,21 +20,21 @@ export default async function VerifyEmailPage({
     <div className="space-y-8 text-center">
       <div className="space-y-2">
         <h1 className="text-2xl font-semibold tracking-tight">
-          {isMagicLink ? "Check your inbox" : "Verify your email"}
+          {isMagicLink ? "Kontrollera din inkorg" : "Bekräfta din e-postadress"}
         </h1>
         <p className="text-sm text-muted-foreground">
           {isMagicLink
-            ? `We sent a sign-in link to ${email ?? "your email address"}. Click it to continue.`
-            : "We sent a verification link to your email address. Click it to activate your account."}
+            ? `Vi skickade en inloggningslänk till ${email ?? "din e-postadress"}. Klicka på den för att fortsätta.`
+            : "Vi skickade en bekräftelselänk till din e-postadress. Klicka på den för att aktivera ditt konto."}
         </p>
       </div>
 
       <div className="rounded-xl border bg-card p-6 text-left text-sm text-muted-foreground space-y-2">
-        <p className="font-medium text-foreground">Did not receive the email?</p>
+        <p className="font-medium text-foreground">Fick du inget e-postmeddelande?</p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Check your spam or junk folder.</li>
-          <li>Make sure you entered the correct email address.</li>
-          <li>Wait a minute and try again.</li>
+          <li>Kontrollera din skräppostmapp.</li>
+          <li>Kontrollera att du angav rätt e-postadress.</li>
+          <li>Vänta en stund och försök igen.</li>
         </ul>
       </div>
 
@@ -42,7 +42,7 @@ export default async function VerifyEmailPage({
         className="inline-block text-sm text-primary hover:underline"
         href="/auth/login"
       >
-        Back to sign in
+        Tillbaka till inloggning
       </Link>
     </div>
   );

@@ -21,27 +21,27 @@ export function MagicLinkForm() {
       <form action={action} className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="email">
-            Email address
+            E-postadress
           </label>
           <Input
             autoComplete="email"
             id="email"
             name="email"
-            placeholder="you@example.com"
+            placeholder="du@exempel.se"
             required
             type="email"
           />
         </div>
 
         <Button className="w-full" disabled={isPending} type="submit">
-          {isPending ? "Sending link…" : "Send magic link"}
+          {isPending ? "Skickar länk…" : "Skicka e-postlänk"}
         </Button>
       </form>
 
       <p className="text-center text-sm text-muted-foreground">
-        Back to{" "}
+        Tillbaka till{" "}
         <Link className="text-primary hover:underline" href="/auth/login">
-          sign in with password
+          inloggning med lösenord
         </Link>
       </p>
     </div>

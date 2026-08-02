@@ -45,7 +45,7 @@ export default function HomePage() {
       }
       description={siteConfig.description}
       navigation={navigation}
-      title="Official Quality WorX starter foundation"
+      title={siteConfig.name}
     >
       <FoundationShowcase />
     </DashboardLayout>

@@ -6,22 +6,22 @@ import { createClient } from "@/lib/supabase/server";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 
 export const metadata: Metadata = {
-  title: "Dashboard",
+  title: "Instrumentpanel",
 };
 
 const navigation = [
   {
-    title: "Dashboard",
+    title: "Instrumentpanel",
     href: "/app/dashboard",
     icon: <LayoutDashboard className="size-4" />,
   },
   {
-    title: "Profile",
+    title: "Profil",
     href: "/app/account/profile",
     icon: <User className="size-4" />,
   },
   {
-    title: "Settings",
+    title: "Kontoinställningar",
     href: "/app/account/settings",
     icon: <Settings2 className="size-4" />,
   },
@@ -46,13 +46,13 @@ export default async function DashboardPage() {
 
   return (
     <DashboardLayout
-      description="Your personal workspace."
+      description="Din personliga arbetsyta."
       navigation={navigation}
-      title={`Welcome back, ${displayName}`}
+      title={`Välkommen tillbaka, ${displayName}`}
     >
       <div className="rounded-xl border bg-card p-6 text-sm text-muted-foreground">
-        You are signed in as <span className="font-medium text-foreground">{user.email}</span>.
-        This is your protected dashboard — it is only accessible to authenticated users.
+        Du är inloggad som <span className="font-medium text-foreground">{user.email}</span>.
+        Detta är din skyddade instrumentpanel — den är endast tillgänglig för inloggade användare.
       </div>
     </DashboardLayout>
   );

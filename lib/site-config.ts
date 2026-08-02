@@ -1,10 +1,15 @@
+import { appConfig } from "@/config/app";
+
+/**
+ * siteConfig is derived from appConfig so all product identity
+ * stays in one place: config/app.ts.
+ */
 export const siteConfig = {
-  name: "Quality WorX Platform Foundation",
-  shortName: "Quality WorX",
-  description:
-    "Official starter template for future Quality WorX applications, focused on reusable architecture, design tokens, layouts, and UI primitives.",
+  name: appConfig.productName,
+  shortName: appConfig.brandName,
+  description: appConfig.description,
   links: {
-    repository: "https://github.com/PaddeFTW/quality-worx-app-template",
+    repository: appConfig.repositoryUrl,
   },
   docs: [
     {
