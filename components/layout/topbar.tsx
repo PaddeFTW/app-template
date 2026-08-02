@@ -11,6 +11,8 @@ interface TopbarProps {
   title?: string;
   description?: string;
   actions?: ReactNode;
+  /** Rendered to the right of the notification bell (e.g. UserMenu) */
+  userSlot?: ReactNode;
   className?: string;
 }
 
@@ -18,6 +20,7 @@ export function Topbar({
   title = "Platform shell",
   description = "A reusable top navigation region for future applications.",
   actions,
+  userSlot,
   className,
 }: TopbarProps) {
   return (
@@ -39,12 +42,13 @@ export function Topbar({
             <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input className="pl-9" placeholder="Search placeholder" />
           </div>
-          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
             {actions}
             <Button size="icon" variant="outline">
               <BellDot className="size-4" />
             </Button>
             <ThemeToggle />
+            {userSlot}
           </div>
         </div>
       </div>
