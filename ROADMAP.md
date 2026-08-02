@@ -2,7 +2,7 @@
 
 ## Current Milestone
 
-Establish the official Quality WorX frontend starter foundation.
+Establish the official frontend starter foundation.
 
 ## Phase 1
 
@@ -39,4 +39,4 @@ Establish the official Quality WorX frontend starter foundation.
 - backend integrations
 - product data models
 - role or permission logic
-- Quality WorX module implementations
+- product-specific module implementations

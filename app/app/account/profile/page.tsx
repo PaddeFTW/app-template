@@ -8,7 +8,7 @@ import { PageHeader } from "@/components/common/page-header";
 import { ProfileForm } from "@/components/account/profile-form";
 
 export const metadata: Metadata = {
-  title: "Profile",
+  title: "Profil",
 };
 
 const navigation = [

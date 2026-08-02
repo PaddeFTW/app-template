@@ -9,7 +9,7 @@ import { PasswordChangeForm } from "@/components/account/password-change-form";
 import { DeleteAccountDialog } from "@/components/account/delete-account-dialog";
 
 export const metadata: Metadata = {
-  title: "Account settings",
+  title: "Kontoinställningar",
 };
 
 const navigation = [

@@ -1,6 +1,6 @@
 # AGENTS
 
-This repository is the shared foundation for future Quality WorX applications. AI agents and contributors should preserve that intent.
+This repository is the shared foundation for future applications built on this template. AI agents and contributors should preserve that intent.
 
 ## Core Rules
 
@@ -30,7 +30,7 @@ This repository is the shared foundation for future Quality WorX applications. A
 
 Ask:
 
-- will more than one future Quality WorX product benefit from this?
+- will more than one future product benefit from this?
 - is the naming neutral?
 - does this belong in `ui`, `common`, `layout`, or product code?
 - does the documentation still match the implementation?

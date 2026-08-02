@@ -12,7 +12,7 @@ The starter foundation uses a semantic design token model rather than hardcoded 
 4. Accessible contrast and readable hierarchy by default.
 5. Motion should guide, not distract.
 
-Product-level UX decisions for future Quality WorX applications should also follow `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`, especially the principles for guided workflows, progressive disclosure, mobile-first use, and positive productivity.
+Product-level UX decisions for future applications should also follow `docs/PRODUCT_TEMPLATE_RULES.md`, especially the principles for guided workflows, progressive disclosure, mobile-first use, and positive productivity.
 
 ## Token Categories
 

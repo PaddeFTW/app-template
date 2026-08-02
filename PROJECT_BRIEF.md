@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Create the official reusable starter template for all Quality WorX applications.
+Create a reusable starter template for modern web applications.
 
 This repository exists to give every future product a shared baseline for:
 
@@ -23,7 +23,7 @@ This repository exists to give every future product a shared baseline for:
 ## What This Repository Is Not
 
 - a complete application
-- a module for a specific Quality WorX workflow
+- a module for a specific product workflow
 - a business-domain implementation
 - a place for product-specific data models or process logic
 
@@ -45,11 +45,11 @@ Examples include:
 
 1. Give every team the same high-quality starting point.
 2. Reduce repeated setup work across future repositories.
-3. Encourage visual consistency across the Quality WorX platform.
+3. Encourage visual consistency across products built on this template.
 4. Keep foundational code clean, neutral, and scalable.
 5. Separate platform concerns from product concerns early.
 
-Future product decisions should follow `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`, which defines Quality WorX Product Principles v2.0 and the platform direction toward guided work experiences.
+Future product decisions should follow `docs/PRODUCT_TEMPLATE_RULES.md`, which defines the platform direction toward guided work experiences.
 
 ## Success Criteria
 
@@ -71,4 +71,4 @@ The template is successful when a future team can clone it and immediately inher
 
 ## Long-Term Role
 
-This repository should become the canonical frontend baseline for the Quality WorX platform and evolve carefully as shared standards mature.
+This repository should become the canonical frontend baseline for products built on this template, and evolve carefully as shared standards mature.

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { BellDot, Search } from "lucide-react";
 
+import { appConfig } from "@/config/app";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -17,8 +18,8 @@ interface TopbarProps {
 }
 
 export function Topbar({
-  title = "Platform shell",
-  description = "A reusable top navigation region for future applications.",
+  title = appConfig.productName,
+  description = appConfig.description,
   actions,
   userSlot,
   className,

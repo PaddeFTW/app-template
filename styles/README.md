@@ -17,4 +17,4 @@ Add files here when the shared platform grows into:
 - editor-specific styles
 - token export scripts
 
-Keep all additions generic and reusable across Quality WorX products.
+Keep all additions generic and reusable across products built on this template.

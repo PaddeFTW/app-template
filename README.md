@@ -1,8 +1,8 @@
-# Quality WorX App Template
+# App Template
 
-Official starter template for all future Quality WorX applications.
+A brand-neutral starter template for building modern web applications.
 
-This repository is intentionally a foundation, not a product. It provides the shared architecture, design tokens, layout shells, UI primitives, and documentation standards that every future Quality WorX application can extend.
+This repository is intentionally a foundation, not a product. It provides the shared architecture, design tokens, layout shells, UI primitives, and documentation standards that every future application can extend.
 
 ## Principles
 
@@ -82,7 +82,7 @@ types/
 - `ROADMAP.md`
 - `CHANGELOG.md`
 - `AGENTS.md`
-- `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`
+- `docs/PRODUCT_TEMPLATE_RULES.md`
 - `docs/`
 
 ## Getting Started
@@ -100,6 +100,6 @@ This template does not include:
 - product-specific routes
 - data models
 - API integrations
-- Quality WorX module logic
+- product-specific module logic
 
 Future applications should clone this repository and add those concerns on top of the shared foundation.

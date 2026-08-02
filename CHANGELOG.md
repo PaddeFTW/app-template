@@ -2,7 +2,7 @@
 
 ## 0.1.0
 
-Initial Quality WorX starter foundation release.
+Initial starter foundation release.
 
 Included:
 

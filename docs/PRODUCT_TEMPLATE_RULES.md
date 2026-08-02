@@ -1,10 +1,10 @@
-# Quality WorX Product Principles v2.0
+# Product Template Rules
 
 ## Syfte
 
-Detta dokument beskriver återanvändbara produktprinciper för framtida Quality WorX-appar. Principerna kommer från lärdomar i arbetet med Egenkontroll App, men dokumentet är inte en specifikation för Egenkontroll och ska inte användas för att kopiera den appen.
+Detta dokument beskriver återanvändbara produktprinciper för framtida appar som byggs på denna template. Principerna är generella och ska inte kopplas till något specifikt varumärke eller produkt.
 
-Målet är att framtida appar ska digitalisera yrkeskunskap, beslutsstöd och arbetsflöden på ett konsekvent sätt, oavsett om appen handlar om egenkontroll, riskbedömning, skyddsrond, kontrollplan, arbetsmiljöplan, miljöplan eller revision.
+Målet är att framtida appar ska digitalisera yrkeskunskap, beslutsstöd och arbetsflöden på ett konsekvent sätt.
 
 ## Grundbeslut
 
@@ -15,7 +15,7 @@ B = guidad arbetsupplevelse
 
 Rekommendation: B.
 
-Quality WorX-appar ska i första hand byggas som guidade arbetsupplevelser. Dokument, formulär och tabeller kan fortfarande finnas, men de ska stödja arbetet i stället för att vara själva huvudupplevelsen.
+Appar som byggs på denna template ska i första hand byggas som guidade arbetsupplevelser. Dokument, formulär och tabeller kan fortfarande finnas, men de ska stödja arbetet i stället för att vara själva huvudupplevelsen.
 
 ## Från Quiz Engine till Guided Workflow Engine
 
@@ -32,7 +32,7 @@ En quiz-liknande upplevelse kan vara ett bra UI-mönster när användaren ska sv
 - progressive disclosure
 - dokumentgenerering i bakgrunden
 - anpassning före start
-- återanvändbara mönster mellan olika Quality WorX-appar
+- återanvändbara mönster mellan olika appar
 
 Använd därför inte `Quiz Engine` som plattformsbegrepp. Skriv hellre `Guided Workflow Engine`, `guided workflow`, `arbetssteg`, `beslutsstöd` eller `frågebank` beroende på sammanhang.
 
@@ -52,7 +52,7 @@ Dokumentet hjälper teamet att förstå innehåll, krav och begrepp. Produktuppl
 
 ### 3. Guided Workflow före formulär
 
-Formulär fungerar när användaren redan vet exakt vad som ska fyllas i. Quality WorX-appar ska ofta hjälpa användaren att komma fram till rätt svar.
+Formulär fungerar när användaren redan vet exakt vad som ska fyllas i. Appar ska ofta hjälpa användaren att komma fram till rätt svar.
 
 En guidad arbetsupplevelse delar upp arbetet i tydliga steg, förklarar vad som behövs och minskar känslan av administrativ börda.
 
@@ -91,11 +91,11 @@ Detta minskar kognitiv belastning och gör apparna mer användbara för både ny
 
 Produktupplevelsen ska kännas som hjälp, inte kontroll.
 
-Quality WorX-appar ska ge användaren känslan av framsteg, tydlighet och trygghet. Tonen ska vara stödjande, inte skuldbeläggande eller byråkratisk.
+Appar ska ge användaren känslan av framsteg, tydlighet och trygghet. Tonen ska vara stödjande, inte skuldbeläggande eller byråkratisk.
 
 ### 9. Mobil först
 
-Många Quality WorX-situationer sker nära arbetet: på byggarbetsplatsen, i produktionen, i fordonet, i ett möte eller under en rondering.
+Många situationer sker nära arbetet: på byggarbetsplatsen, i produktionen, i fordonet, i ett möte eller under en rondering.
 
 Designa därför för mobil användning först. Desktop kan erbjuda mer översikt, men mobilflödet ska vara fullt användbart.
 
@@ -178,7 +178,7 @@ Revision kan använda guided workflow för intervjuer, observationer, avvikelser
 
 ## Design- och arkitekturkonsekvenser
 
-Framtida Quality WorX-appar bör:
+Framtida appar bör:
 
 - börja med användarens arbetsuppgift, inte dokumentets layout
 - modellera arbetssteg och beslut före UI-komponenter
@@ -197,4 +197,4 @@ Detta dokument skapar inte:
 - en specifik Egenkontroll-arkitektur
 - färdiga workflow-komponenter
 
-Det är ett styrdokument för produktbeslut i framtida Quality WorX-appar.
+Det är ett styrdokument för produktbeslut i framtida appar som byggs på denna template.
