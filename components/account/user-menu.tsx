@@ -65,14 +65,14 @@ export function UserMenu({ email, fullName }: UserMenuProps) {
             href="/app/account/profile"
           >
             <User className="size-4 text-muted-foreground" />
-            Profile
+            Profil
           </Link>
           <Link
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-token hover:bg-accent"
             href="/app/account/settings"
           >
             <Settings2 className="size-4 text-muted-foreground" />
-            Settings
+            Kontoinställningar
           </Link>
         </nav>
 
@@ -86,7 +86,7 @@ export function UserMenu({ email, fullName }: UserMenuProps) {
             variant="outline"
           >
             <LogOut className="size-4" />
-            Sign out
+            Logga ut
           </Button>
         </DialogFooter>
       </DialogContent>

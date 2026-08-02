@@ -20,14 +20,14 @@ export function ResetPasswordForm() {
       <form action={action} className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="password">
-            New password
+            Nytt lösenord
           </label>
           <Input
             autoComplete="new-password"
             id="password"
             minLength={8}
             name="password"
-            placeholder="Min. 8 characters"
+            placeholder="Min. 8 tecken"
             required
             type="password"
           />
@@ -35,21 +35,21 @@ export function ResetPasswordForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="confirm_password">
-            Confirm new password
+            Bekräfta nytt lösenord
           </label>
           <Input
             autoComplete="new-password"
             id="confirm_password"
             minLength={8}
             name="confirm_password"
-            placeholder="Repeat password"
+            placeholder="Upprepa lösenord"
             required
             type="password"
           />
         </div>
 
         <Button className="w-full" disabled={isPending} type="submit">
-          {isPending ? "Saving…" : "Save new password"}
+          {isPending ? "Sparar…" : "Spara nytt lösenord"}
         </Button>
       </form>
     </div>

@@ -18,12 +18,12 @@ const navigation = [
     icon: <LayoutDashboard className="size-4" />,
   },
   {
-    title: "Profile",
+    title: "Profil",
     href: "/app/account/profile",
     icon: <User className="size-4" />,
   },
   {
-    title: "Settings",
+    title: "Kontoinställningar",
     href: "/app/account/settings",
     icon: <Settings2 className="size-4" />,
   },
@@ -50,9 +50,9 @@ export default async function ProfilePage() {
     <AppLayout navigation={navigation}>
       <div className="space-y-6">
         <PageHeader
-          description="Update your name, company, and job title."
-          eyebrow="Account"
-          title="Profile"
+          description="Uppdatera ditt namn, företag och jobbtitel."
+          eyebrow="Konto"
+          title="Profil"
         />
         <div className="max-w-xl rounded-xl border bg-card p-6">
           <ProfileForm profile={profile} />
