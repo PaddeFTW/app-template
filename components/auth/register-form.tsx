@@ -21,13 +21,13 @@ export function RegisterForm() {
       <form action={action} className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="full_name">
-            Fullständigt namn
+            Full name
           </label>
           <Input
             autoComplete="name"
             id="full_name"
             name="full_name"
-            placeholder="Anna Svensson"
+            placeholder="Jane Smith"
             required
             type="text"
           />
@@ -35,13 +35,13 @@ export function RegisterForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="email">
-            E-postadress
+            Email address
           </label>
           <Input
             autoComplete="email"
             id="email"
             name="email"
-            placeholder="du@exempel.se"
+            placeholder="you@example.com"
             required
             type="email"
           />
@@ -49,28 +49,28 @@ export function RegisterForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="password">
-            Lösenord
+            Password
           </label>
           <Input
             autoComplete="new-password"
             id="password"
             minLength={8}
             name="password"
-            placeholder="Min. 8 tecken"
+            placeholder="Min. 8 characters"
             required
             type="password"
           />
         </div>
 
         <Button className="w-full" disabled={isPending} type="submit">
-          {isPending ? "Skapar konto…" : "Skapa konto"}
+          {isPending ? "Creating account…" : "Create account"}
         </Button>
       </form>
 
       <p className="text-center text-sm text-muted-foreground">
-        Har du redan ett konto?{" "}
+        Already have an account?{" "}
         <Link className="text-primary hover:underline" href="/auth/login">
-          Logga in
+          Sign in
         </Link>
       </p>
     </div>

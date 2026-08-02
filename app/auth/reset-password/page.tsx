@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 
 export const metadata: Metadata = {
-  title: "Nytt lösenord",
+  title: "Set new password",
 };
 
 export default function ResetPasswordPage() {
@@ -11,10 +11,10 @@ export default function ResetPasswordPage() {
     <div className="space-y-8">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">
-          Välj ett nytt lösenord
+          Set a new password
         </h1>
         <p className="text-sm text-muted-foreground">
-          Ange ett nytt lösenord för ditt konto.
+          Choose a new password for your account.
         </p>
       </div>
 

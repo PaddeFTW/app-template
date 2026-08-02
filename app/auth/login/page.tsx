@@ -6,7 +6,7 @@ import { MagicLinkForm } from "@/components/auth/magic-link-form";
 import { SocialLoginButtons } from "@/components/auth/social-login-buttons";
 
 export const metadata: Metadata = {
-  title: "Logga in",
+  title: "Sign in",
 };
 
 interface LoginPageProps {
@@ -22,12 +22,12 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
     <div className="space-y-8">
       <div className="space-y-2 text-center">
         <h1 className="text-2xl font-semibold tracking-tight">
-          {showMagicLink ? "Logga in med e-postlänk" : "Logga in"}
+          {showMagicLink ? "Sign in with magic link" : "Sign in to your account"}
         </h1>
         <p className="text-sm text-muted-foreground">
           {showMagicLink
-            ? "Ange din e-postadress så skickar vi en inloggningslänk."
-            : "Ange din e-postadress och ditt lösenord för att fortsätta."}
+            ? "Enter your email and we'll send you a sign-in link."
+            : "Enter your email and password to continue."}
         </p>
       </div>
 
@@ -44,7 +44,7 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               className="text-sm text-muted-foreground hover:text-foreground hover:underline"
               href="/auth/login?tab=magic-link"
             >
-              Logga in med e-postlänk istället
+              Sign in with magic link instead
             </Link>
           </div>
           <SocialLoginButtons />

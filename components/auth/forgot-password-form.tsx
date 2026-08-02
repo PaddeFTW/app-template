@@ -14,11 +14,11 @@ export function ForgotPasswordForm() {
     return (
       <div className="space-y-4 text-center">
         <p className="rounded-xl border border-success/20 bg-success/10 px-4 py-3 text-sm text-success">
-          Om e-postadressen är registrerad får du en återställningslänk inom kort.
-          Kontrollera din inkorg och skräppost.
+          If that email is registered, you&apos;ll receive a reset link shortly.
+          Check your inbox and spam folder.
         </p>
         <Link className="text-sm text-primary hover:underline" href="/auth/login">
-          Tillbaka till inloggning
+          Back to sign in
         </Link>
       </div>
     );
@@ -35,27 +35,27 @@ export function ForgotPasswordForm() {
       <form action={action} className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="email">
-            E-postadress
+            Email address
           </label>
           <Input
             autoComplete="email"
             id="email"
             name="email"
-            placeholder="du@exempel.se"
+            placeholder="you@example.com"
             required
             type="email"
           />
         </div>
 
         <Button className="w-full" disabled={isPending} type="submit">
-          {isPending ? "Skickar…" : "Skicka återställningslänk"}
+          {isPending ? "Sending…" : "Send reset link"}
         </Button>
       </form>
 
       <p className="text-center text-sm text-muted-foreground">
-        Kom du ihåg lösenordet?{" "}
+        Remembered it?{" "}
         <Link className="text-primary hover:underline" href="/auth/login">
-          Tillbaka till inloggning
+          Back to sign in
         </Link>
       </p>
     </div>

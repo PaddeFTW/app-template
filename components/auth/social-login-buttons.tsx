@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { appConfig } from "@/config/app";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { createClient } from "@/lib/supabase/client";
@@ -20,8 +19,6 @@ type Provider = (typeof PROVIDERS)[number]["id"];
 export function SocialLoginButtons() {
   const [loading, setLoading] = useState<Provider | null>(null);
   const [error, setError] = useState<string | null>(null);
-
-  if (!appConfig.socialLogin) return null;
 
   async function handleOAuth(provider: Provider) {
     setLoading(provider);

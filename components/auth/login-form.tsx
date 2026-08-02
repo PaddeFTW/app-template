@@ -19,7 +19,7 @@ export function LoginForm({ redirectTo, resetSuccess }: LoginFormProps) {
     <div className="space-y-6">
       {resetSuccess && (
         <p className="rounded-xl border border-success/20 bg-success/10 px-4 py-3 text-sm text-success">
-          Lösenordet har uppdaterats. Logga in med ditt nya lösenord.
+          Password updated successfully. Sign in with your new password.
         </p>
       )}
 
@@ -36,13 +36,13 @@ export function LoginForm({ redirectTo, resetSuccess }: LoginFormProps) {
 
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="email">
-            E-postadress
+            Email address
           </label>
           <Input
             autoComplete="email"
             id="email"
             name="email"
-            placeholder="du@exempel.se"
+            placeholder="you@example.com"
             required
             type="email"
           />
@@ -51,13 +51,13 @@ export function LoginForm({ redirectTo, resetSuccess }: LoginFormProps) {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium" htmlFor="password">
-              Lösenord
+              Password
             </label>
             <Link
               className="text-sm text-primary hover:underline"
               href="/auth/forgot-password"
             >
-              Glömt lösenord?
+              Forgot password?
             </Link>
           </div>
           <Input
@@ -72,14 +72,14 @@ export function LoginForm({ redirectTo, resetSuccess }: LoginFormProps) {
         </div>
 
         <Button className="w-full" disabled={isPending} type="submit">
-          {isPending ? "Loggar in…" : "Logga in"}
+          {isPending ? "Signing in…" : "Sign in"}
         </Button>
       </form>
 
       <p className="text-center text-sm text-muted-foreground">
-        Inget konto?{" "}
+        Don&apos;t have an account?{" "}
         <Link className="text-primary hover:underline" href="/auth/register">
-          Skapa konto
+          Create account
         </Link>
       </p>
     </div>
