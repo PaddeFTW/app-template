@@ -34,7 +34,7 @@ export async function signUp(
     email,
     password,
     options: {
-      emailRedirectTo: `${redirectUrl}?next=/app/dashboard`,
+      emailRedirectTo: `${redirectUrl}/auth/confirm?next=/auth/verify-email`,
       data: {
         full_name: fullName,
       },

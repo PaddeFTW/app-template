@@ -24,14 +24,16 @@ export function getAppUrl(): string {
 }
 
 /**
- * Get the full redirect URL for Supabase email flows.
+ * Get the base URL for Supabase email redirect flows.
+ * 
+ * The actual redirect path (/auth/confirm) is added by each auth action
+ * because Supabase will append query parameters (?token_hash=xxx&type=email).
  * 
  * Used in:
- * - Sign-up email confirmation
- * - Magic link authentication
- * - Password reset
+ * - Sign-up: emailRedirectTo: `${getRedirectUrl()}/auth/confirm`
+ * - Magic link: emailRedirectTo: `${getRedirectUrl()}/auth/confirm`
+ * - Password reset: redirectTo: `${getRedirectUrl()}/auth/confirm`
  */
 export function getRedirectUrl(): string {
-  const baseUrl = getAppUrl();
-  return `${baseUrl}/auth/confirm`;
+  return getAppUrl();
 }
