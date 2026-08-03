@@ -30,23 +30,25 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  // IMPORTANT: getClaims() does not make a network request — it reads the JWT
-  // from the cookie. Never use getSession() here as it can be spoofed.
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // IMPORTANT: getClaims() reads the JWT directly from the cookie without
+  // making a network request to Supabase Auth — safe and fast for route
+  // protection. Never use getSession() here as it can be spoofed.
+  // Use getUser() only in Server Actions / Server Components that need a
+  // verified, up-to-date user record from the Auth server.
+  const { data, error } = await supabase.auth.getClaims();
+  const isAuthenticated = !error && data?.claims?.sub != null;
 
   const { pathname } = request.nextUrl;
 
   // Authenticated user trying to access auth pages → redirect to dashboard
   const isAuthPage = pathname.startsWith("/auth");
-  if (isAuthPage && user) {
+  if (isAuthPage && isAuthenticated) {
     return NextResponse.redirect(new URL("/app/dashboard", request.url));
   }
 
   // Unauthenticated user trying to access protected pages → redirect to login
   const isProtectedPage = pathname.startsWith("/app");
-  if (isProtectedPage && !user) {
+  if (isProtectedPage && !isAuthenticated) {
     const loginUrl = new URL("/auth/login", request.url);
     loginUrl.searchParams.set("redirectTo", pathname);
     return NextResponse.redirect(loginUrl);

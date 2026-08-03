@@ -145,7 +145,9 @@ const supabase = createClient(); // from lib/supabase/client.ts
 const { data: { session } } = await supabase.auth.getSession();
 ```
 
-Never use `getSession()` for security checks on the server. Always use `getUser()`.
+Never use `getSession()` for security checks on the server — it reads from local storage and can be spoofed. Use:
+- `getClaims()` in `proxy.ts` / middleware — reads JWT from cookie locally, no network request
+- `getUser()` in Server Actions / Server Components — makes a network request to verify the user with Supabase Auth
 
 ## Route Protection
 
@@ -157,7 +159,7 @@ GET /auth/* (with session) → redirect to /app/dashboard
 GET /* (no auth routes) → allowed
 ```
 
-The proxy reads the JWT from the session cookie without making a network request, making it fast and secure.
+The proxy uses `getClaims()` to read the JWT directly from the session cookie without making a network request, making it fast and secure. `getUser()` makes a network request to the Supabase Auth server and should only be used in Server Actions or Server Components that need a verified, up-to-date user record.
 
 ## Database Schema
 
@@ -174,7 +176,7 @@ Users can only access their own profile row via RLS policies.
 ## Security Considerations
 
 1. **Never expose `SUPABASE_SERVICE_ROLE_KEY` to the browser** — Only used in `/api/auth/delete-account`
-2. **Never use `getSession()` for server-side auth checks** — Use `getUser()` instead
+2. **Never use `getSession()` for server-side auth checks** — Use `getClaims()` in proxy/middleware (no network request) or `getUser()` in Server Actions (verified network request)
 3. **Email confirmation is required for sign-up** — Verify `email_confirmed_at` is not null before allowing login
 4. **Session tokens are short-lived** — Refresh happens automatically via proxy on each request
 5. **Passwords are hashed by Supabase** — Never hash client-side
