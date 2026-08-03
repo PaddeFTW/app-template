@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 
+import { getRedirectUrl } from "@/lib/app-url";
 import { createClient } from "@/lib/supabase/server";
 
 export interface SignUpState {
@@ -27,9 +28,7 @@ export async function signUp(
     return { error: "Password must be at least 8 characters." };
   }
 
-  const redirectUrl =
-    process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL ??
-    `${process.env.NEXT_PUBLIC_SITE_URL}/auth/confirm`;
+  const redirectUrl = getRedirectUrl();
 
   const { error } = await supabase.auth.signUp({
     email,

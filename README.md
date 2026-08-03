@@ -83,6 +83,7 @@ types/
 - `CHANGELOG.md`
 - `AGENTS.md`
 - `docs/PRODUCT_TEMPLATE_RULES.md`
+- `docs/AUTHENTICATION.md` — Supabase Auth setup, session management, email flows, OAuth, route protection
 - `docs/`
 
 ## Getting Started

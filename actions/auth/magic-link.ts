@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 
+import { getRedirectUrl } from "@/lib/app-url";
 import { createClient } from "@/lib/supabase/server";
 
 export interface MagicLinkState {
@@ -21,9 +22,7 @@ export async function requestMagicLink(
     return { error: "Email is required." };
   }
 
-  const redirectUrl =
-    process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL ??
-    `${process.env.NEXT_PUBLIC_SITE_URL}/auth/confirm`;
+  const redirectUrl = getRedirectUrl();
 
   const { error } = await supabase.auth.signInWithOtp({
     email,
