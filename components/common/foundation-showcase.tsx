@@ -181,7 +181,7 @@ export function FoundationShowcase() {
           <CardHeader>
             <CardTitle>Token status</CardTitle>
             <CardDescription>
-              Shared design tokens prepared for all future Quality WorX products.
+              Shared design tokens prepared for all future applications.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
