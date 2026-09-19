@@ -4,7 +4,7 @@
 
 This repository separates platform foundation concerns from application concerns.
 
-Future product architecture should also be guided by `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`. In particular, the platform language should use `Guided Workflow Engine` as the reusable architectural concept; quiz-style screens are only one possible UI pattern inside that broader approach.
+Future product architecture should also be guided by `docs/PRODUCT_PRINCIPLES.md`. Use `Guided Workflow Engine` as the reusable architectural concept; quiz-style screens are only one possible UI pattern.
 
 The foundation should answer:
 
@@ -15,7 +15,7 @@ The foundation should answer:
 
 It should not answer:
 
-- how a specific Quality WorX product behaves
+- how a specific product behaves
 - which business entities exist
 - what workflows a module requires
 
@@ -51,11 +51,11 @@ The template provides four shell patterns:
 - `DocumentLayout` for structured long-form content
 - `SettingsLayout` for preference and configuration surfaces
 
-These layouts intentionally stop at structure and presentation.
+Dashboard with sidebar is the standard shell. These layouts stop at structure and presentation.
 
 ## Theming Strategy
 
-The design system is implemented through CSS custom properties in `app/globals.css` and mirrored in `lib/design-tokens.ts` for discoverability.
+The design system is the v0 Modern Minimal theme, implemented as CSS custom properties in `app/globals.css` and mirrored in `lib/design-tokens.ts`.
 
 This enables:
 

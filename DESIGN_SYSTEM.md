@@ -2,105 +2,110 @@
 
 ## Overview
 
-The starter foundation uses a semantic design token model rather than hardcoded product styling. Components consume shared meanings such as `background`, `foreground`, `primary`, `border`, and `muted`, which makes future branding and theming easier.
+The starter uses a semantic token model from the v0 **Modern Minimal** theme. Components consume shared meanings such as `background`, `foreground`, `primary`, `border`, `muted`, and `sidebar`.
+
+Tokens are implemented in `app/globals.css` and documented in `lib/design-tokens.ts`.
 
 ## Design Principles
 
 1. Semantic before decorative.
 2. Reuse before specialization.
-3. Calm, precise, and premium over flashy.
+3. Calm, precise, and minimal over flashy.
 4. Accessible contrast and readable hierarchy by default.
 5. Motion should guide, not distract.
 
-Product-level UX decisions for future Quality WorX applications should also follow `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`, especially the principles for guided workflows, progressive disclosure, mobile-first use, and positive productivity.
+Product-level UX decisions should also follow `docs/PRODUCT_PRINCIPLES.md`.
 
-## Token Categories
+## Source
 
-### Colors
+Theme: v0 Modern Minimal (Default)
 
-The template defines semantic colors for:
+- Font sans: Inter
+- Font serif: Source Serif 4
+- Font mono: Geist Mono
+- Radius: `0.375rem`
+- Shadow: `0 1px 2px 0 #0000000d`
 
-- background
-- foreground
-- card
-- popover
-- primary
-- secondary
-- muted
-- accent
-- success
-- warning
-- destructive
-- border
-- input
-- ring
-- sidebar
-- surface
-- surface-elevated
+## Colors
 
-These are implemented in `app/globals.css` and documented in `lib/design-tokens.ts`.
+| Token | Value |
+| --- | --- |
+| Primary | `#3b82f6` |
+| Primary Foreground | `#ffffff` |
+| Secondary | `#f3f4f6` |
+| Secondary Foreground | `#4b5563` |
+| Accent | `#e0f2fe` |
+| Accent Foreground | `#1e3a8a` |
+| Background | `#ffffff` |
+| Foreground | `#333333` |
+| Card | `#ffffff` |
+| Card Foreground | `#333333` |
+| Popover | `#ffffff` |
+| Popover Foreground | `#333333` |
+| Muted | `#f9fafb` |
+| Muted Foreground | `#6b7280` |
+| Destructive | `#ef4444` |
+| Destructive Foreground | `#ffffff` |
+| Border | `#e5e7eb` |
+| Input | `#e5e7eb` |
+| Ring | `#3b82f6` |
+| Chart 1 | `#3b82f6` |
+| Chart 2 | `#2563eb` |
+| Chart 3 | `#1d4ed8` |
+| Chart 4 | `#1e40af` |
+| Chart 5 | `#1e3a8a` |
+| Sidebar | `#f9fafb` |
+| Sidebar Foreground | `#333333` |
+| Sidebar Primary | `#3b82f6` |
+| Sidebar Primary Foreground | `#ffffff` |
+| Sidebar Accent | `#e0f2fe` |
+| Sidebar Accent Foreground | `#1e3a8a` |
+| Sidebar Border | `#e5e7eb` |
+| Sidebar Ring | `#3b82f6` |
 
-### Spacing
+Dark mode keeps the same semantic names with inverted surfaces.
 
-Spacing is prepared as a small foundational scale to keep shells and components consistent. Future products should prefer existing rhythm before introducing one-off spacing values.
+## Typography
 
-### Radius
+- Sans: Inter
+- Serif: Source Serif 4
+- Mono: Geist Mono
 
-A shared radius system gives the platform its visual softness. Components should prefer token-based radii over ad hoc rounding.
+Use Inter for UI. Use Source Serif 4 for long-form document content. Use Geist Mono for code and technical labels.
 
-### Shadows
+## Radius
 
-Elevation is intentionally subtle and optimized for premium SaaS surfaces rather than strong card stacking.
+Base radius is `0.375rem`. Prefer token radii over ad hoc rounding.
 
-### Typography
+## Shadows
 
-The default typographic approach prioritizes:
+Default elevation is a single soft shadow:
 
-- clean heading hierarchy
-- strong legibility
-- compact but comfortable dense-interface rhythm
+```text
+0 1px 2px 0 #0000000d
+```
 
-### Animations
+Keep elevation subtle.
 
-Motion tokens exist for fast, base, and slow transitions. Use them to preserve a unified interaction feel.
+## Layout
+
+Dashboard and sidebar are the standard application shell. Use `DashboardLayout` and `Sidebar` unless a screen clearly needs `DocumentLayout` or `SettingsLayout`.
 
 ## Theme Strategy
 
-The foundation is ready for:
-
-- light mode
-- dark mode
-- future branded theme packs
-
-Theme values are implemented with CSS variables and consumed through Tailwind-friendly semantic utilities.
+- light mode (default Modern Minimal)
+- dark mode (same tokens, inverted surfaces)
+- future branded theme packs via CSS variables
 
 ## Component Guidance
 
-### UI primitives
-
-`components/ui/` should remain small, focused, and reusable. These files are the platform’s base building blocks.
-
-### Common components
-
-`components/common/` should contain neutral compositions that appear in many products, such as state components and headers.
-
-### Layout components
-
-`components/layout/` should define shell structure, not workflow behavior.
-
-## Visual Direction
-
-The interface language should feel closer to modern premium SaaS products such as Notion, Linear, and Stripe:
-
-- restrained color usage
-- crisp spacing
-- subtle shadows
-- refined borders
-- strong content hierarchy
+- `components/ui/` — small, reusable primitives
+- `components/common/` — neutral compositions
+- `components/layout/` — shell structure, not workflow behavior
 
 ## Extension Rules
 
 - add new tokens only when multiple products need them
-- avoid embedding module-specific names in global tokens
+- avoid embedding product names in global tokens
 - keep primitives generic
 - create product-level variants outside the template when only one application needs them

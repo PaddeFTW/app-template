@@ -1,8 +1,8 @@
-# Quality WorX App Template
+# app
 
-Official starter template for all future Quality WorX applications.
+Official starter template for applications.
 
-This repository is intentionally a foundation, not a product. It provides the shared architecture, design tokens, layout shells, UI primitives, and documentation standards that every future Quality WorX application can extend.
+This repository is a foundation, not a product. It provides shared architecture, design tokens, layout shells, UI primitives, and documentation standards that applications can extend.
 
 ## Principles
 
@@ -22,8 +22,9 @@ This repository is intentionally a foundation, not a product. It provides the sh
 
 ## Included Foundation
 
-- semantic design token system
+- semantic design token system (v0 Modern Minimal)
 - reusable layout shells
+- dashboard and sidebar as the standard application shell
 - neutral UI primitives
 - reusable page states
 - theme-ready light and dark styling
@@ -51,6 +52,8 @@ types/
 - `DashboardLayout`
 - `DocumentLayout`
 - `SettingsLayout`
+
+Dashboard with sidebar is the default application pattern.
 
 ## Core UI Primitives
 
@@ -82,7 +85,7 @@ types/
 - `ROADMAP.md`
 - `CHANGELOG.md`
 - `AGENTS.md`
-- `docs/QUALITY_WORX_PRODUCT_PRINCIPLES.md`
+- `docs/PRODUCT_PRINCIPLES.md`
 - `docs/`
 
 ## Getting Started
@@ -100,6 +103,6 @@ This template does not include:
 - product-specific routes
 - data models
 - API integrations
-- Quality WorX module logic
+- product module logic
 
-Future applications should clone this repository and add those concerns on top of the shared foundation.
+Clone this repository and add those concerns on top of the shared foundation.

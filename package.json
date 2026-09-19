@@ -1,7 +1,7 @@
 {
-  "name": "quality-worx-app-template",
+  "name": "app",
   "version": "1.0.0",
-  "description": "Official starter template for all Quality WorX applications, including the shared design system, architecture, components, and project standards.",
+  "description": "Official starter template for applications, including the shared design system, architecture, components, and project standards.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PaddeFTW/quality-worx-app-template.git"
+    "url": "git+https://github.com/PaddeFTW/app-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "private": true,
   "bugs": {
-    "url": "https://github.com/PaddeFTW/quality-worx-app-template/issues"
+    "url": "https://github.com/PaddeFTW/app-template/issues"
   },
-  "homepage": "https://github.com/PaddeFTW/quality-worx-app-template#readme",
+  "homepage": "https://github.com/PaddeFTW/app-template#readme",
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.18",
     "@radix-ui/react-progress": "^1.1.11",

@@ -2,14 +2,14 @@
 
 ## Current Milestone
 
-Establish the official Quality WorX frontend starter foundation.
+Establish the official frontend starter foundation for **app**.
 
 ## Phase 1
 
 - bootstrap Next.js, TypeScript, and Tailwind
-- establish semantic design tokens
+- establish semantic design tokens from v0 Modern Minimal
 - provide neutral UI primitives
-- provide reusable layout shells
+- provide reusable layout shells with dashboard and sidebar as standard
 - document architecture and design rules
 
 ## Phase 2
@@ -39,4 +39,4 @@ Establish the official Quality WorX frontend starter foundation.
 - backend integrations
 - product data models
 - role or permission logic
-- Quality WorX module implementations
+- product module implementations

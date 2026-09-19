@@ -24,8 +24,9 @@ npm run build
 
 1. Replace the root showcase with your product routes.
 2. Keep shared primitives in `components/ui/`.
-3. Add product-specific modules outside the shared platform layer.
-4. Extend tokens only when the change benefits multiple applications.
+3. Keep dashboard and sidebar as the default shell.
+4. Add product-specific modules outside the shared platform layer.
+5. Extend tokens only when the change benefits multiple applications.
 
 ## Recommended Approach
 

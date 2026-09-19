@@ -1,6 +1,6 @@
 # AGENTS
 
-This repository is the shared foundation for future Quality WorX applications. AI agents and contributors should preserve that intent.
+This repository is the shared foundation for future applications. The product name is **app**. AI agents and contributors should preserve that intent.
 
 ## Core Rules
 
@@ -8,7 +8,8 @@ This repository is the shared foundation for future Quality WorX applications. A
 2. Do not add business workflows, domain models, or feature logic that only belongs to one product.
 3. Prefer reusable architecture, neutral naming, and composable UI.
 4. Update documentation whenever shared structure or conventions change.
-5. Keep additions aligned with the design token system and layout strategy.
+5. Keep additions aligned with the Modern Minimal token system and layout strategy.
+6. Use dashboard and sidebar as the default shell.
 
 ## Preferred Contribution Shape
 
@@ -25,12 +26,13 @@ This repository is the shared foundation for future Quality WorX applications. A
 - business-specific tables or forms
 - mock domain entities presented as real platform concepts
 - hardcoded brand decisions that cannot be themed later
+- reintroducing product brand names into the template
 
 ## When Adding New Shared Code
 
 Ask:
 
-- will more than one future Quality WorX product benefit from this?
+- will more than one future product benefit from this?
 - is the naming neutral?
 - does this belong in `ui`, `common`, `layout`, or product code?
 - does the documentation still match the implementation?

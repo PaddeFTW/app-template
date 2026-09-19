@@ -17,7 +17,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({
-  title = "Quality WorX",
+  title = "app",
   subtitle = "Foundation navigation",
   items = [],
   footer,

@@ -6,6 +6,7 @@ This directory exists to document and extend the global styling system beyond `a
 
 - `app/globals.css` defines runtime CSS variables and theme mappings
 - `lib/design-tokens.ts` documents the token contract in TypeScript
+- `DESIGN_SYSTEM.md` documents the v0 Modern Minimal theme
 
 ## Intended future use
 
@@ -17,4 +18,4 @@ Add files here when the shared platform grows into:
 - editor-specific styles
 - token export scripts
 
-Keep all additions generic and reusable across Quality WorX products.
+Keep all additions generic and reusable across applications.
