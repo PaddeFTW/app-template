@@ -23,8 +23,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
+  title: "app · Smart arbetsyta",
+  description: "En neutral app-foundation med en valfri, granskningsbar Smart arbetsyta.",
 };
 
 export default function RootLayout({
