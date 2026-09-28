@@ -50,6 +50,7 @@ import { ErrorState } from "@/components/common/error-state";
 import { LoadingState } from "@/components/common/loading-state";
 import { DocumentLayout } from "@/components/layout/document-layout";
 import { SettingsLayout } from "@/components/layout/settings-layout";
+import { SmartWorkspaceDemo } from "@/components/common/smart-workspace-demo";
 
 export function FoundationShowcase() {
   return (
@@ -207,6 +208,8 @@ export function FoundationShowcase() {
           </CardContent>
         </Card>
       </section>
+
+      <SmartWorkspaceDemo />
 
       <section className="grid gap-6 lg:grid-cols-2">
         <Card>
