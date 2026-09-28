@@ -16,18 +16,20 @@ export function createDemoProposal(inputText: string, context: WorkspaceContext)
     changes.push({ field_id: field.id, label: field.label, old_value: field.value, new_value: newValue, confidence, reason, source_ref: sourceRef, warning_ids: warningIds });
   };
 
-  const customer = text.match(/kunden är\s+([^.!?]+)/i)?.[1]?.trim();
+  const lines = text.split(/\r?\n|[,;]+/).map((line) => line.trim()).filter(Boolean);
+  const compactNames = text.match(/^(.+?)\s+([A-ZÅÄÖ][\p{L}-]+)\s+\d\s*av\s*5/iu);
+  const customer = text.match(/kunden är\s+([^.!?]+)/i)?.[1]?.trim() ?? (lines.length >= 4 ? lines[0] : compactNames?.[1]?.trim());
   if (customer) add("customer_name", customer, 3, "Kunden namngavs i texten.", "src_user");
-  const contact = text.match(/([A-ZÅÄÖ][\p{L}-]+) är kontaktperson/iu)?.[1];
+  const contact = text.match(/([A-ZÅÄÖ][\p{L}-]+) är kontaktperson/iu)?.[1] ?? (lines.length >= 4 ? lines[1] : compactNames?.[2]);
   if (contact) add("contact_person", contact, 3, "Kontaktperson namngavs i texten.", "src_user");
   const rating = text.match(/(\d)\s*av\s*5/i)?.[1];
   if (rating) add("rating", Number(rating), 3, "Användaren angav ett betyg.", "src_user");
-  if (rating && /leverans/i.test(lower)) {
+  if (rating) {
     const warningId = "w_low";
     warnings.push({ id: warningId, field_id: "comment", code: "low_confidence", message: "Kommentaren är en tolkning, inte ett citat." });
     add("comment", `De gav ${rating} av 5 på leveransen.`, 1, "Kort sammanfattning av underlaget.", "src_ai", [warningId]);
   }
-  const month = lower.match(/i\s+(januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)/);
+  const month = lower.match(/(?:i\s+)?(januari|februari|mars|april|maj|juni|juli|augusti|september|oktober|november|december)/);
   if (month) {
     const months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
     const dateWarning = "w_date";
