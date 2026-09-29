@@ -6,6 +6,12 @@ Smart Workspace is an optional shared layer in the template. Apps provide a `Wor
 
 `SmartWorkspacePanel` uses the deterministic `createDemoProposal` mapper by default. It recognizes the generic showcase scenario without a knowledge base, retrieval, external model, automatic actions, or persistence. Replace the mapper behind the same proposal contract when an app needs a server-side implementation.
 
+## Company context (V1.1)
+
+`WorkspaceContext.company` is optional. The template does not persist a company profile and does not store organisation numbers in workspace types. Product apps map their own profile down to `CompanyContext` (`display_name`, `industry`, `size_band`, `standard_ids`).
+
+`toKnowledgeQuery(ctx)` copies those fields onto `KnowledgeQuery` for a future adapter. V1.1 still uses `NoopAdapter`. Changing company context must not rewrite existing records.
+
 ## Safety boundaries
 
 - `workspace_enabled: false` renders no floating button.
