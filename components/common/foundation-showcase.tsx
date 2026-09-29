@@ -7,6 +7,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import { AuthSessionCard } from "@/components/common/auth-session-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,6 +62,8 @@ export function FoundationShowcase() {
           { title: "Starter template" },
         ]}
       />
+
+      <AuthSessionCard />
 
       <section className="grid gap-4 lg:grid-cols-3">
         {[
