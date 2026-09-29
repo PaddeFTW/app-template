@@ -1,4 +1,7 @@
+import type { CompanyContext } from "./company";
 import type { FieldContract, FieldInstance } from "./field-contract";
+
+export type { CompanyContext, CompanySizeBand } from "./company";
 
 export type WorkspaceLocale = "sv" | "en";
 
@@ -17,6 +20,7 @@ export type WorkspaceContext = {
     canApplyWorkspace: boolean;
   };
   fields: FieldInstance[];
+  company?: CompanyContext;
 };
 
 export type ApplyFieldUpdatesInput = {
