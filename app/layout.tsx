@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter, Source_Serif_4 } from "next/font/google";
 
 import { ThemeProvider } from "@/components/common/theme-provider";
-import { siteConfig } from "@/lib/site-config";
+import { AuthProvider } from "@/components/providers/auth-provider";
 
 import "./globals.css";
 
@@ -23,8 +23,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "app · Smart arbetsyta",
-  description: "En neutral app-foundation med en valfri, granskningsbar Smart arbetsyta.",
+  title: "app · Foundation",
+  description: "Delad app-foundation med auth, företag och Smart arbetsyta.",
 };
 
 export default function RootLayout({
@@ -33,9 +33,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html lang="sv" suppressHydrationWarning>
       <body className={`${inter.variable} ${sourceSerif.variable} ${geistMono.variable} ${inter.className}`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <AuthProvider>{children}</AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
