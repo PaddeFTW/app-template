@@ -24,3 +24,9 @@ Included:
 - reusable layout shells
 - neutral UI primitives and states
 - platform documentation set
+
+## 2026-10-13
+- Modern 2027 design: cyan/violet palette, glass effects, larger radius, refined shadows
+- Language selector with 12 languages (top global + Swedish/English)
+- Enhanced Smart Workspace floating button (gradient, cooler AI vibe)
+- i18n foundation in lib/i18n.ts
