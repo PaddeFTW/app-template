@@ -3,44 +3,44 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* v0 Modern Minimal — light */
+/* 2027 Modern Cool — light */
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
+  --background: #f8fafc;
+  --foreground: #0f172a;
   --card: #ffffff;
-  --card-foreground: #333333;
+  --card-foreground: #0f172a;
   --popover: #ffffff;
-  --popover-foreground: #333333;
-  --primary: #3b82f6;
+  --popover-foreground: #0f172a;
+  --primary: #06b6d4;
   --primary-foreground: #ffffff;
-  --secondary: #f3f4f6;
-  --secondary-foreground: #4b5563;
-  --muted: #f9fafb;
-  --muted-foreground: #6b7280;
-  --accent: #e0f2fe;
-  --accent-foreground: #1e3a8a;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #334155;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #a855f7;
+  --accent-foreground: #ffffff;
   --success: #10b981;
   --warning: #f59e0b;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e5e7eb;
-  --input: #e5e7eb;
-  --ring: #3b82f6;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #06b6d4;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --chart-1: #3b82f6;
-  --chart-2: #2563eb;
-  --chart-3: #1d4ed8;
-  --chart-4: #1e40af;
-  --chart-5: #1e3a8a;
-  --sidebar: #f9fafb;
-  --sidebar-foreground: #333333;
-  --sidebar-primary: #3b82f6;
+  --chart-1: #06b6d4;
+  --chart-2: #8b5cf6;
+  --chart-3: #ec4899;
+  --chart-4: #f59e0b;
+  --chart-5: #10b981;
+  --sidebar: #f1f5f9;
+  --sidebar-foreground: #0f172a;
+  --sidebar-primary: #06b6d4;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #e0f2fe;
-  --sidebar-accent-foreground: #1e3a8a;
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: #3b82f6;
+  --sidebar-accent-foreground: #0c4a6e;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #06b6d4;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -51,64 +51,64 @@
   --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
-  --radius: 0.375rem;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --shadow-xs: 0 1px 2px 0 #0000000d;
-  --shadow-sm: 0 1px 2px 0 #0000000d;
-  --shadow-md: 0 1px 2px 0 #0000000d;
-  --shadow-lg: 0 1px 2px 0 #0000000d;
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-source-serif), "Source Serif 4", ui-serif, Georgia, serif;
   --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, SFMono-Regular, monospace;
-  --tracking-tight: -0.03em;
-  --tracking-wide: 0.04em;
+  --tracking-tight: -0.025em;
+  --tracking-wide: 0.025em;
   --duration-fast: 150ms;
-  --duration-base: 250ms;
-  --duration-slow: 400ms;
-  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* v0 Modern Minimal — dark */
+/* 2027 Modern Cool — dark */
 .dark {
-  --background: #0f172a;
-  --foreground: #f3f4f6;
-  --card: #1e293b;
-  --card-foreground: #f3f4f6;
-  --popover: #1e293b;
-  --popover-foreground: #f3f4f6;
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
+  --background: #020617;
+  --foreground: #f1f5f9;
+  --card: #0f172a;
+  --card-foreground: #f1f5f9;
+  --popover: #0f172a;
+  --popover-foreground: #f1f5f9;
+  --primary: #22d3ee;
+  --primary-foreground: #020617;
   --secondary: #1e293b;
   --secondary-foreground: #cbd5e1;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #1e3a8a;
-  --accent-foreground: #e0f2fe;
+  --accent: #c084fc;
+  --accent-foreground: #020617;
   --success: #34d399;
   --warning: #fbbf24;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #334155;
-  --input: #334155;
-  --ring: #3b82f6;
-  --surface: #0f172a;
-  --surface-elevated: #1e293b;
-  --chart-1: #3b82f6;
-  --chart-2: #2563eb;
-  --chart-3: #1d4ed8;
-  --chart-4: #1e40af;
-  --chart-5: #1e3a8a;
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f3f4f6;
-  --sidebar-primary: #3b82f6;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1e3a8a;
-  --sidebar-accent-foreground: #e0f2fe;
-  --sidebar-border: #334155;
-  --sidebar-ring: #3b82f6;
+  --destructive: #f87171;
+  --destructive-foreground: #020617;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #22d3ee;
+  --surface: #020617;
+  --surface-elevated: #0f172a;
+  --chart-1: #22d3ee;
+  --chart-2: #a78bfa;
+  --chart-3: #f472b6;
+  --chart-4: #fbbf24;
+  --chart-5: #34d399;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #22d3ee;
+  --sidebar-primary-foreground: #020617;
+  --sidebar-accent: #164e63;
+  --sidebar-accent-foreground: #a5f3fc;
+  --sidebar-border: #1e293b;
+  --sidebar-ring: #22d3ee;
 }
 
 @theme inline {
@@ -173,6 +173,7 @@ body {
   @apply bg-background text-foreground antialiased;
   min-height: 100vh;
   font-family: var(--font-sans);
+  background-image: radial-gradient(ellipse at top, color-mix(in oklab, var(--primary) 8%, transparent), transparent 50%);
 }
 
 a {
@@ -185,10 +186,7 @@ a {
 }
 
 @layer base {
-  h1,
-  h2,
-  h3,
-  h4 {
+  h1, h2, h3, h4 {
     letter-spacing: var(--tracking-tight);
   }
 }
@@ -202,24 +200,17 @@ a {
     background-color: var(--surface-elevated);
   }
 
-  .shadow-token-xs {
-    box-shadow: var(--shadow-xs);
-  }
-
-  .shadow-token-sm {
-    box-shadow: var(--shadow-sm);
-  }
-
-  .shadow-token-md {
-    box-shadow: var(--shadow-md);
-  }
-
-  .shadow-token-lg {
-    box-shadow: var(--shadow-lg);
-  }
+  .shadow-token-xs { box-shadow: var(--shadow-xs); }
+  .shadow-token-sm { box-shadow: var(--shadow-sm); }
+  .shadow-token-md { box-shadow: var(--shadow-md); }
+  .shadow-token-lg { box-shadow: var(--shadow-lg); }
 
   .transition-token {
     transition-duration: var(--duration-base);
     transition-timing-function: var(--ease-standard);
+  }
+
+  .glass {
+    @apply bg-background/70 backdrop-blur-xl border border-border/50;
   }
 }
