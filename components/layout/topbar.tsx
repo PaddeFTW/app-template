@@ -4,6 +4,7 @@ import { BellDot, Search } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/common/theme-toggle";
+import { LanguageSelector } from "@/components/common/language-selector";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -23,7 +24,7 @@ export function Topbar({
   return (
     <div
       className={cn(
-        "sticky top-0 z-30 border-b bg-background/80 backdrop-blur-xl",
+        "sticky top-0 z-30 border-b bg-background/70 backdrop-blur-xl",
         className,
       )}
     >
@@ -37,11 +38,12 @@ export function Topbar({
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative w-full sm:w-72">
             <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-            <Input className="pl-9" placeholder="Search placeholder" />
+            <Input className="pl-9 glass" placeholder="Search..." />
           </div>
           <div className="flex items-center gap-2">
             {actions}
-            <Button size="icon" variant="outline">
+            <LanguageSelector />
+            <Button size="icon" variant="outline" className="glass">
               <BellDot className="size-4" />
             </Button>
             <ThemeToggle />
