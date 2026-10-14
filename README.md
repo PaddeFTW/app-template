@@ -1,108 +1,42 @@
-# app
+# app-template
 
-Official starter template for applications.
+Official starter template for Quality Works applications.
 
-This repository is a foundation, not a product. It provides shared architecture, design tokens, layout shells, UI primitives, and documentation standards that applications can extend.
+Foundation for future apps built with Grok + v0, Supabase, downloadable EXE, and SQL migrations.
 
-## Principles
+## Core idea
 
-- Build once at the platform layer, reuse across products.
-- Prefer composition over feature-specific abstractions.
-- Keep domain logic out of the starter.
-- Document decisions so future teams can move fast without guesswork.
+Before every module: guided questions generate material → Smart Workspace for review/approve → publish into the module.
 
-## Tech Stack
+## Design
 
-- Next.js
-- TypeScript
-- Tailwind CSS
-- shadcn/ui-compatible structure
-- Radix UI
-- Lucide React
+- **Light**: Indigo/violet, soft layered shadows, airy surfaces (from onboarding-app).
+- **Dark**: High-contrast Laser Tech (#00E5FF primary, deep blacks, high readability).
+- 12 languages (en, sv, es, fr, de, pt, zh, ja, ar, ru, hi, it).
 
-## Included Foundation
+## Knowledge
 
-- semantic design token system (v0 Modern Minimal)
-- reusable layout shells
-- dashboard and sidebar as the standard application shell
-- neutral UI primitives
-- reusable page states
-- theme-ready light and dark styling
-- platform architecture documentation
+Basic ISO terms (9001, 14001, 45001, 27001 + common) live in `docs/knowledge-base/`. Use simple Swedish. Say "krav" and "avsnitt", never "klausul".
 
-## Folder Structure
+## Tech
+
+Next.js, TypeScript, Tailwind, shadcn/ui, Radix, Lucide.
+
+## Structure
 
 ```text
 app/
-components/
-  common/
-  layout/
-  ui/
-docs/
-hooks/
-lib/
-public/
-styles/
-types/
+components/common/   # GuidedSmartEntry, SmartWorkspace, states
+components/layout/   # Dashboard, Sidebar, Topbar
+docs/knowledge-base/ # ISO term modules
+lib/                 # i18n, tokens, workspace
 ```
 
-## Primary Layout Shells
-
-- `AppLayout`
-- `DashboardLayout`
-- `DocumentLayout`
-- `SettingsLayout`
-
-Dashboard with sidebar is the default application pattern.
-
-## Core UI Primitives
-
-- `Button`
-- `Card`
-- `Input`
-- `Textarea`
-- `Select`
-- `Dialog`
-- `Table`
-- `Badge`
-- `Progress`
-
-## Shared Presentation Components
-
-- `Sidebar`
-- `Topbar`
-- `Breadcrumb`
-- `PageHeader`
-- `EmptyState`
-- `LoadingState`
-- `ErrorState`
-
-## Documentation
-
-- `PROJECT_BRIEF.md`
-- `DESIGN_SYSTEM.md`
-- `ARCHITECTURE.md`
-- `ROADMAP.md`
-- `CHANGELOG.md`
-- `AGENTS.md`
-- `docs/PRODUCT_PRINCIPLES.md`
-- `docs/`
-
-## Getting Started
+## Getting started
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Non-Goals
-
-This template does not include:
-
-- business workflows
-- product-specific routes
-- data models
-- API integrations
-- product module logic
-
-Clone this repository and add those concerns on top of the shared foundation.
+Clone and extend. Domain logic stays outside the starter.
