@@ -1,37 +1,17 @@
 import { Blocks, FileStack, Home, LayoutPanelTop, Settings2 } from "lucide-react";
 
 import { FoundationShowcase } from "@/components/common/foundation-showcase";
+import { GuidedSmartEntry } from "@/components/common/guided-smart-entry";
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 
 const navigation = [
-  {
-    title: "Foundation overview",
-    href: "/",
-    icon: <Home className="size-4" />,
-  },
-  {
-    title: "UI primitives",
-    href: "/",
-    icon: <Blocks className="size-4" />,
-    badge: "Core",
-  },
-  {
-    title: "Layout shells",
-    href: "/",
-    icon: <LayoutPanelTop className="size-4" />,
-  },
-  {
-    title: "Document patterns",
-    href: "/",
-    icon: <FileStack className="size-4" />,
-  },
-  {
-    title: "Settings patterns",
-    href: "/",
-    icon: <Settings2 className="size-4" />,
-  },
+  { title: "Foundation overview", href: "/", icon: <Home className="size-4" /> },
+  { title: "UI primitives", href: "/", icon: <Blocks className="size-4" />, badge: "Core" },
+  { title: "Layout shells", href: "/", icon: <LayoutPanelTop className="size-4" /> },
+  { title: "Document patterns", href: "/", icon: <FileStack className="size-4" /> },
+  { title: "Settings patterns", href: "/", icon: <Settings2 className="size-4" /> },
 ];
 
 export default function HomePage() {
@@ -47,7 +27,10 @@ export default function HomePage() {
       navigation={navigation}
       title="app"
     >
-      <FoundationShowcase />
+      <div className="space-y-8">
+        <GuidedSmartEntry moduleName="Foundation" />
+        <FoundationShowcase />
+      </div>
     </DashboardLayout>
   );
 }
